@@ -1,0 +1,156 @@
+  /* Apply flexbox to the body to center content */ 
+  body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+}
+
+/* Business card styles */
+.contact-card {
+    display: flex;
+    align-items: center;
+    width: 600px;  /* Increase the width of the card */
+    background-color: #D58A94;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: 'Fredoka One', sans-serif; 
+    margin: 10px;
+}
+
+/* Avatar styles */
+.contact-avatar {
+    width: 150px;  /* Increase avatar size */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 20px;
+    border: 2px solid #775246;
+}
+
+/* Contact info layout */
+.contact-info {
+    padding: 20px;  /* Add more padding */
+    flex-grow: 1;   /* Allow info section to expand */
+}
+
+/* Contact name styles */
+.contact-name {
+    font-size: 28px;  /* Larger font size for name */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #4E3524;
+}
+
+/* Job title styles */
+.contact-title {
+    font-size: 20px;  /* Larger font size for title */
+    color: #906243;
+    margin-bottom: 15px;
+}
+
+/* Email & Phone styles */
+.contact-email, .contact-phone {
+    font-size: 16px;  /* Larger font size for email/phone */
+    color: #906243;
+    margin: 8px 0;
+}
+
+/* Links styling */
+.contact-email a, .contact-phone a {
+    color: #906243;
+    text-decoration: none;
+}
+
+.contact-email a:hover, .contact-phone a:hover {
+    text-decoration: underline;
+}
+
+/* ================================
+   Media Queries for Larger Screens
+=================================== */
+
+/* For screens 768px or larger (tablets and up) */
+@media (min-width: 768px) {
+    .contact-card {
+        width: 700px;  /* Increase card width for tablets and larger devices */
+        margin: 20px;  /* Adjust margin for larger screens */
+    }
+    
+    .contact-avatar {
+        width: 180px;  /* Increase avatar size */
+        height: 180px;
+    }
+
+    .contact-name {
+        font-size: 32px;  /* Larger name font size */
+    }
+
+    .contact-title {
+        font-size: 24px;  /* Larger title font size */
+    }
+
+    .contact-email, .contact-phone {
+        font-size: 18px;  /* Larger text for email/phone */
+    }
+}
+
+/* For screens 1024px or larger (desktops and up) */
+@media (min-width: 1024px) {
+    .contact-card {
+        width: 800px;  /* Increase card width further for desktop screens */
+        margin: 30px;  /* More space for larger devices */
+    }
+
+    .contact-avatar {
+        width: 200px;  /* Larger avatar size for desktops */
+        height: 200px;
+    }
+
+    .contact-name {
+        font-size: 36px;  /* Even larger name font size */
+    }
+
+    .contact-title {
+        font-size: 28px;  /* Even larger title font size */
+    }
+
+    .contact-email, .contact-phone {
+        font-size: 20px;  /* Further increase text size */
+    }
+}
+
+/* ================================
+   Media Query to Stack Items Vertically on Small Screens
+=================================== */
+
+/* For screens smaller than 768px (mobile devices) */
+@media (max-width: 767px) {
+    .contact-card {
+        flex-direction: column;  /* Stack the avatar and text vertically */
+        width: 90%;  /* Make the card take up most of the screen width */
+        margin: 20px 0;  /* Adjust margin for vertical stacking */
+    }
+
+    .contact-avatar {
+        width: 120px;  /* Slightly increase avatar size */
+        height: 120px;
+        margin-bottom: 15px;  /* Space out the avatar from the text */
+    }
+
+    .contact-info {
+        padding: 10px;  /* Reduce padding for smaller screens */
+    }
+
+    .contact-name {
+        font-size: 20px;  /* Adjust name font size */
+    }
+
+    .contact-title {
+        font-size: 14px;  /* Adjust job title font size */
+    }
+
+    .contact-email, .contact-phone {
+        font-size: 12px;  /* Adjust phone/email font size */
+    }
